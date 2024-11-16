@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>7h</title>
+</head>
+<body>
+  
+  <script>
+    function convertLength(length , from , to){
+      if (from ==='miles' && to ==='km'){
+        kilo = length * 1.6 ;
+        console.log(`${kilo} ${to}`);
+      }
+      if (from === 'km' && to === 'miles'){
+        miles = length / 1.6;
+        console.log(`${miles} ${to}`);
+      }
+      if (from === 'miles' && to === 'ft'){
+        feet = length * 5280;
+        console.log(`${feet} ${to}`);
+      }
+      if (from === 'ft' && to === 'miles'){
+        miles = length / 5280;
+        console.log(`${miles} ${to}`);
+      }
+      if (from === 'km' && to === 'ft'){
+        feet = length * 3281;
+        console.log(`${feet} ${to}`);
+      }
+      if (from === 'ft' && to === 'km'){
+        kilo = length / 3281;
+        console.log(`${kilo} ${to}`);
+      }
+      if (from === to ) { 
+        console.log(`${length} ${from}`);
+      } 
+     
+    } 
+    convertLength(5,'miles','km');
+    convertLength(5,'miles','ft');
+    convertLength(5 , 'km', 'ft');
+    convertLength(5 , 'lbs', 'lbs');
+
+  </script>
+</body>
+</html> 

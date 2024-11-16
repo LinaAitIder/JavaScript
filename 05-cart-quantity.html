@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+  </head>
+  <body> 
+    <button onclick="console.log(`Cart Quantity : ${cardQuantity} `)">Show Qunatity</button>
+    <button onclick="
+      cardQuantity++;
+      console.log(`Cart Quantity : ${cardQuantity } `)
+    ">Add to cart</button>
+    <button onclick="
+      cardQuantity+=2;
+      console.log(`Cart Quantity : ${cardQuantity } `)"
+    >+2</button>
+    <button
+      onclick="cardQuantity=cardQuantity+3;
+      console.log(`Cart Quantity : ${cardQuantity } `)"
+      >+3
+    </button>
+    <button onclick="cardQuantity= 0 ;console.log(`Card was reset.`);console.log(`Cart Quantity : ${cardQuantity } `)">Reset button</button>
+    
+    <button onclick="cardQuantity+=4; console.log(`Cart Quantity : ${cardQuantity } `)">+4</button>
+    <button onclick="cardQuantity+=5; console.log(`Cart Quantity : ${cardQuantity } `)">+5</button>
+    <button onclick="cardQuantity--; console.log(`Cart Quantity : ${cardQuantity } `)"> 
+      Remove from cart
+    </button>
+    <button onclick="cardQuantity-=2; console.log(`Cart Quantity : ${cardQuantity } `)"> 
+      -2
+    </button>
+    <button onclick="cardQuantity-=3; console.log(`Cart Quantity : ${cardQuantity } `)"> 
+      -3
+    </button>
+    <script>
+      let cardQuantity = 0;
+
+    </script>
+
+  </body>
+</html>
+
+<!-- Indentation -->
+<!-- line-wrapping -->

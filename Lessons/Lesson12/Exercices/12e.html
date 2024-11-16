@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12b</title>
+</head>
+<body>
+  <button class="fin">Add to Cart
+  </button>
+  <p class="message"></p>
+</body>
+<script>
+  let buttonElement = document.querySelector('.fin');
+  let msgElement = document.querySelector('.message');
+  const State = ()=>{
+    setTimeout(function(){
+      msgElement.innerHTML='Added';
+    },0);
+    setTimeout(function(){
+      msgElement.innerHTML='';
+    },2000);
+  };
+  buttonElement.addEventListener("click",State)
+
+</script>
+</html>

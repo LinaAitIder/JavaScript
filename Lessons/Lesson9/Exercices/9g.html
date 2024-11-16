@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Projects</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button class='js-subscribe-button' onclick="
+    let sub_btn = document.querySelector('.js-subscribe-button');
+    if( sub_btn.innerHTML === 'Subscribe'){
+      sub_btn.innerHTML = 'Subscribed';
+    }
+    else{
+      sub_btn.innerHTML = 'Subscribe'
+    }
+  ">Subscribe</button>
+  <p>Rock paper Scissors</p>
+  <a href="09-rock-paper-scissors.html">Click here</a>
+
+  <p>Amazon Shipping calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping</p>
+  <input type="text" class="text" placeholder="Cost of order" onkeydown=" 
+    handleCostKeydown(event);
+  ">
+  <button class="calculate" onclick="
+  calculateTotal();
+  ">Calculate</button>
+  <p class="resultcost"></p>
+  <script>
+    String(25);
+    window.document
+    window.console.log('window');
+
+
+
+     function calculateTotal(){
+      const cost = document.querySelector('.text').value;
+  let resultcost = document.querySelector('.resultcost');
+  if(cost < 40){
+    let newcost = parseFloat(cost) + 10 ;
+    resultcost.innerHTML = `$${newcost}`;
+  }
+  else {
+    resultcost.innerHTML = `$${cost}`;
+  }
+     }
+
+  function handleCostKeydown(event){
+      if (event.key === 'Enter') {
+    calculateTotal();
+  }
+  else {
+    console.log('waiting for further writing ...');
+  }
+     }
+  </script>
+</body>
+</html>

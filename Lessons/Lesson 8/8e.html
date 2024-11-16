@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    let product1 = {
+      name : "basketball",
+      price : 2095
+    };
+    let product2 = {
+      name : "Volleyball",
+      price : 300
+    };
+    let product3 ={
+      name : "basketball",
+      price : 2095
+    };
+
+    function isSameProduct(a , b){
+        if(a.name === b.name && a.price === b.price ){
+          return true;
+        }
+        else {
+          return false;
+        }
+    }
+    // Forgot to write teh parameters in the function
+    console.log(isSameProduct(product3 , product1));
+
+  </script>
+</body>
+</html>

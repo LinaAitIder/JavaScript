@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Projects</title>
+  <style>
+    .subscribe-button{
+      color : white;
+      background-color: black;
+      font-weight: bold;
+      border : none;
+      padding-top :10px;
+      padding-bottom : 10px;
+      padding-right : 15px;
+      padding-left : 15px;
+      border-radius: 20px;
+      cursor : pointer;
+      margin-bottom : 30px;
+    }
+    .is_subscribed{
+      background-color: rgb(240, 240, 240);
+      color : black;
+    }
+    body{
+      font-family: arial;
+    }
+    .cost-input{
+      font-size : 15px !important;
+      padding : 10px !important;
+    }
+    .calculate-btn{
+      background-color: green;
+      color : white;
+      padding : 12px;
+      border : none;
+      cursor : pointer;
+    }
+    .errorMsg{
+      color :red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+<p>Amazon Shipping calculator</p>
+<p>Orders under $40 = +$10 shipping.</p>
+<p>Orders over $40 = FREE shipping</p>
+
+<input type="text" placeholder="Cost of order" class="text cost-input"  onkeydown=" 
+  handleCostKeydown(event);
+">
+<button class="calculate-btn" onclick="
+calculateTotal();
+">Calculate</button>
+
+<p class="resultcost"></p>
+<p class="errorMsg"></p>
+
+
+
+
+
+  <script>
+   
+    function calculateTotal(){
+      const cost = document.querySelector('.text').value;
+      console.log(cost<40);
+      let resultcost = document.querySelector('.resultcost');
+      if(cost < 0){
+        document.querySelector('.errorMsg').innerHTML = "Error : cost cannot be less than $0" ;
+      }
+      else if(cost < 40){
+        let newcost = parseInt(cost) + 10 ;
+        resultcost.innerHTML = `$${newcost}`;
+      }
+      else {
+        resultcost.innerHTML = `$${cost}`;
+      }
+    }
+    
+
+    function handleCostKeydown(event){
+      //Js is case-sensitive Enter not enter
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+      else {
+        console.log('waiting for further writing ...');
+      }
+    }
+  </script>
+</body>
+</html>

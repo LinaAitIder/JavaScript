@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Booleans</title>
+</head>
+<body>
+  
+  <script>
+    console.log(typeof true);
+    console.log(5 == '5.00');
+    if(false) {
+      console.log('hello');
+    }
+    else {
+      console.log('else');
+    } 
+  
+    let age = 15;
+    if(age >= 16) {
+      console.log('You can drive');
+      console.log('Congrats');
+    } else if (age >= 14) {
+      console.log('Almost There!');
+    }
+    else {
+      console.log('You cannot');
+    }
+
+    if(5){ // we call this value a truthy value , bcs it behaves just as truth
+      console.log('truthy');
+    }
+    console.log(!0);
+    console.log('text' / 5); //Nan :  The result is not a number
+    let variable1;
+    console.log(variable1); //undefined : this variable is not defined , this is used only with let not with const id we want to use it with const : const var = undefined
+    
+
+  </script>
+</body>
+</html>

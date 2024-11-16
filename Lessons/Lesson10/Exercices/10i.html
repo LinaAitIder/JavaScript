@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>Calculator Styled</head>
+  <link rel="stylesheet" href="styles/CalculatorStyled.css" class="rel">
+  <body>
+    </br>
+    <p class="text"></p>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      " class="numbers-btn">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      " class="numbers-btn">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      " class="numbers-btn">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      " class="ope-btn">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      " class="numbers-btn">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      " class="numbers-btn">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      " class="numbers-btn">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      " class="ope-btn">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      " class="numbers-btn">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      " class="numbers-btn">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      " class="numbers-btn">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      " class="ope-btn">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      " class="numbers-btn">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      " class="ope-btn">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+        result.innerHTML = calculation;
+        localStorage.setItem('operation', calculation);
+
+      " class="ope-btn">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      " class="ope-btn">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        result.innerHTML = calculation;
+      ">Clear</button>
+    </p>
+
+    <script src="../scripts/script.js"> </script>
+  </body>
+</html>

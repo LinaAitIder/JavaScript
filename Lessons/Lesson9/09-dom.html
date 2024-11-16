@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-btn">Second button</button>
+  <script>
+    console.log(document.title);
+    console.log(document.body);
+   
+    // document.body.innerHTML = 'hello';
+    // document.title = 'Good job!';
+    console.log(document.body.innerHTML);
+    //document.body.innerHTML= '<button>Good job!</button>';
+    document.querySelector('button').innerHTML='CHANGED';
+   document.querySelector('.js-btn').innerHTML='ALSO CHANGED';
+  </script>
+</body>
+</html>

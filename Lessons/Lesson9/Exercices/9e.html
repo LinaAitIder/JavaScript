@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9a</title>
+</head>
+<body>
+  <input type="text" class="name" onkeydown="
+    if(event.key === 'Enter'){
+      addname();
+    }
+    else{
+      console.log('yep , not working ...');
+    }
+    ">
+  <button class="submit" onclick="
+    addname();
+  ">Submit</button>
+  <p class="container"></p>
+  <script>
+    let container = document.querySelector('.container');
+    function addname(){
+      let inputValue = document.querySelector('.name').value;
+      container.innerHTML = `Your name is : ${inputValue}`;
+      document.querySelector('.name').value = '' ;
+    }
+  </script>
+</body>
+</html>

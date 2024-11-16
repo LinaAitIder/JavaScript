@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+</head>
+<style>
+
+</style>
+<body>
+  <button class="Add-btn">Add</button>
+  <button class="delete-btn" >Remove</button>
+</body>
+<script>
+  let messages =2;
+  let addBtn = document.querySelector('.Add-btn');
+  let deleteBtn = document.querySelector('.delete-btn');
+  const intervalSetting = setInterval(()=>{
+    if(messages > 0){
+      if(document.title === 'App'){
+        document.title = `(${messages}) New messages`;
+      } else{
+        document.title = 'App';
+      }
+    }
+    else {
+      document.title = 'App';
+    }
+  }, 1000);
+  addBtn.addEventListener("click", ()=>{
+    messages++;
+    intervalSetting();
+  }
+);
+  deleteBtn.addEventListener("click", ()=>{
+    messages--;
+    intervalSetting();
+  }
+
+  );
+
+
+  
+
+
+ </script>
+</html>

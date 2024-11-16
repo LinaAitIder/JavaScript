@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+<body>
+  <script>
+    const product1 = {
+      name : "basketball",
+      price : 2095
+    };
+    const product2 = {
+      name : "Volleyball",
+      price : 300
+    };
+
+    function comparePrice(product1 , product2){
+        if(product1.price > product2.price){
+          return product2;
+        }
+        else {
+          return product1;
+        }
+    }
+    // Forgot to write teh parameters in the function
+    console.log(comparePrice(product1 , product2));
+
+  </script>
+</body>
+</html>

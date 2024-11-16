@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  
+  <script>
+    function convertLength(length , from , to){
+      if (from ==='miles' && to ==='km'){
+        kilo = length * 1.6 ;
+        console.log(`${kilo} ${to}`);
+      }
+      if (from === 'km' && to === 'miles'){
+        miles = length / 1.6;
+        console.log(`${miles} ${to}`);
+      }
+      if (from === to ) { 
+        console.log(`${length} ${from}`);
+      }
+    } 
+    convertLength(50,'miles','km');
+    convertLength(32 ,'km','miles');
+    convertLength(50 , 'km', 'km');
+  </script>
+</body>
+</html> 

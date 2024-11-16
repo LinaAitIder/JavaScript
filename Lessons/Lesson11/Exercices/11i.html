@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arrays ans loops</title>
+</head>
+<body>
+  
+  <script>
+    function addNumber(array, num){
+      //console.log(Array.isArray(array));
+      let newArray = [];
+      for (let i=0; i<array.length; i++){
+        newArray.push(array[i]+num);
+      }
+      return newArray;
+    }
+    
+    console.log(addNumber([1,2,3],2));
+    console.log(addNumber([1,2,3],3));
+    console.log(addNumber([-2,-1,0,99],2));
+  </script>
+</body>
+</html>

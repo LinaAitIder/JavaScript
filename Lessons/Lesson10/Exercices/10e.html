@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10a-b</title>
+  <link rel="stylesheet" href="Exo10-styles.css" class="rel">
+</head>
+<body>
+<button class="js-button gaming-btn" onclick="
+   toggle('.gaming-btn');
+  ">Gaming</button>
+<button class="js-button Music-btn" onclick="
+toggle('.Music-btn');
+">Music</button>
+<button class="js-button Tech-btn" onclick="
+toggle('.Tech-btn');
+">Tech</button>
+  <script>
+   function toggle(className){
+   let btnCheck = document.querySelector(className);
+   if (btnCheck.classList.contains('is-toggled')){
+        btnCheck.classList.remove('is-toggled');
+      }
+      else {
+        btnCheck.classList.add('is-toggled');
+      }
+    }
+  </script>
+</body>
+</html>
